@@ -1,0 +1,67 @@
+.office { /* the office CLASS */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  flex-direction: column; /* make stuff stack downwards */
+}
+
+#office { /* the office IMAGE */
+  position: absolute;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  
+  max-width: 100%;
+  height: auto; /* adjust height to match width */
+  
+  top: 30px; /* fixed Y position */
+  left: 0;
+  user-select: none; /* make it so ppl cant drag the image away lol */
+
+  z-index: 1; /* make it the background layer */
+}
+
+#camButton {
+  background: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  top: 200px;
+  left: 75px;
+  
+  opacity: 0.4;
+
+  user-select: none;
+
+  filter: hue-rotate(90deg); /* change color */
+
+  z-index: 3; /* make it the third layer, above everything else */
+}
+
+.cameraScreen {
+  position: absolute; /* make z-index work */
+  top: 0; /* adjust where it goes on the screen */
+  left: 0;
+  z-index: 2; /* make it the second layer, above the office image */
+}
+
+#map {
+  filter: url(#green-ahh);
+  pointer-events: none;
+  opacity: 0;
+
+  display: block;
+  width: 100%; /* make it scales correctly */
+}
+
+#nightVisionEffect {
+  filter: url(#green-ahh)
+}
+
+body {
+  background-color: black; /* set remaining background to black */
+  overflow: hidden; /* hide scroll bars */
+}
