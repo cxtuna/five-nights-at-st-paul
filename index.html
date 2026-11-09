@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <!-- head = metadata about the document -->
+  <head>
+    <!-- these dont work cuz trinket btw -->
+    <title>FIVE NIGHTS AT ST. PAUL</title> <!-- the text u see on top of the tab -->
+    <link rel="icon" type="image/x-icon" src="icon.png"> <!-- the icon / image u see on top of the tab -->
+
+     <!-- LINK TO EXTERNAL STYLESHEET (styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <!-- body = main content of a webpage -->
+  <body>
+    
+    <!-- GREEN SCREEN FILTER -->
+    <svg width="0" height="0" style="position:absolute">
+      <filter id="green-ahh" color-interpolation-filters="sRGB">
+        <feColorMatrix
+          type="matrix"
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            1 -1 1 0 1
+          "
+        />
+      </filter>
+    </svg>
+    
+    <!-- DIV for everything u see on screen -->
+    <div class="office">
+      <img id="office" src="images/officeClosed.jpeg">
+      
+      <div class="cameraScreen">
+        <img id="map" src="images/mapFixed.png">
+        <h1 id="currentCamText">CAM1</h1>
+      </div>
+    </div>
+
+    <img id="camButton" src="images/camera button.png">
+
+    <!-- LINK TO EXTERNAL JAVASCRIPT SHEET (script.js) -->
+    <script src="script.js"></script>
+  </body>
+</html>
